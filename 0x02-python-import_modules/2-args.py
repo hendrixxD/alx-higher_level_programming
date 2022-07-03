@@ -5,7 +5,7 @@ def Argv(argv):
             print("{:d} arguments.".format(i))
         elif i == 1:
             print("{:d} argument:".format(i))
-            print("{:d}: {}".format(i, argv[i]))
+            print("{:d}: {:s}".format(i, argv[i]))
         else:
             j = 1
             while j <= i:

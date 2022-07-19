@@ -9,10 +9,9 @@ def safe_print_list(my_list=[], x=0):
 
     except IndexError:
         pass
-        #print("out of range")
     except ValueError:
         pass
-        #print("my_list combined of all data types")
+
     print()
 
     return num

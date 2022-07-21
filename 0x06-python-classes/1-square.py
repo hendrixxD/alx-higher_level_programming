@@ -1,4 +1,4 @@
-#!/usr/binn/python3
+#!/usr/bin/python3
 """defines a Square base on '0-Square.py'"""
 
 

@@ -29,10 +29,12 @@ class Square:
             raise TypeError("size must be an integer")
         if self.__size < 0:
             raise ValueError("size must be >= 0")
+
         self.__size = value
 
     def area(self):
         """return the area of square taking in size as attribute instance"""
+
         return self.__size * self.__size
 
     def my_print(self):
@@ -40,13 +42,18 @@ class Square:
             to stdout the square with the '#' character
             empty line if size = 0
         """
+
         if self.__size == 0:
             print()
         else:
-            for r in range(self.__size):
-                for c in range(self.__size):
-                    print("#", end="\n" if c is self.__size - 1 and r != c else "")
-            print()
+            col = 0
+            while col < self.__size:
+                row = 0
+                while row < self.__size:
+                    print("#", end='')
+                    row += 1
+                print()
+                col += 1
 
 
 def main():

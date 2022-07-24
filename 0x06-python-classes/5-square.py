@@ -54,22 +54,3 @@ class Square:
                     row += 1
                 print()
                 col += 1
-
-
-def main():
-    my_square = Square(3)
-    my_square.my_print()
-
-    print("--")
-
-    my_square.size = 10
-    my_square.my_print()
-
-    print("--")
-
-    my_square.size = 0
-    my_square.my_print()
-
-    print("--")
-
-main()

@@ -54,20 +54,7 @@ class Square:
         """prints in stdout the square with the character '#'"""
         if self.__size == 0:
             print()
-        else:
-            col = 0
-            pos0, pos1 = self.__position
-            for new_col in range(pos1):
-                print()
-            while col < self.__size:
-                i = 0
-                while i < pos0:
-                    print(" ", end='') #replace position with space
-                    i += 1
-
-                row = 0
-                while row < self.__size:
-                    print("{}".format("#"), end='')
-                    row += 1
-                print()
-                col += 1
+        for col in range(self.position[1]):
+            print()
+        for row in range(self.size):
+            print("{}{}".format(" " * self.position[0], "#" * self.size))

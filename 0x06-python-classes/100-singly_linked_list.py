@@ -37,11 +37,16 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if value == None:
+        if value is None:
             if isinstance(value, Node):
                 self.__next_node = value
         else:
             raise TypeError("next node must be a node")
+
+"""
+produces a linked list of sorted Node objects then print/line
+
+"""
 
 class SinglyLinkedList:
     """defines a singly linked list module"""
@@ -55,14 +60,16 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """inserts a new Node into the correct sorted position in the list"""
+
         def sorted_insert(self, value):
-        if self.__head is None or value < self.__head.data:
-            self.__head = Node(value, self.__head)
-            return
-        tmp = self.__head
-        while tmp.next_node is not None and tmp.next_node.data < value:
-            tmp = tmp.next_node
-        tmp.next_node = Node(value, tmp.next_node)
+            if self.__head is None or value < self.__head.data:
+                self.__head = Node(value, self.__head)
+                return
+            tmp = self.__head
+            while tmp.next_node is not None and tmp.next_node.data < value:
+                tmp = tmp.next_node
+            tmp.next_node = Node(value, tmp.next_node)
+
     """
     Print
     """

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""module that performs integers division"""
+"""module that performs integers addition"""
 
-def add_integers(a, b=98):
+def add_integer(a, b=98):
     """Returns sum of two integers
     Args:
         a: int or float
@@ -14,27 +14,9 @@ def add_integers(a, b=98):
 
     """
 
-    if not isinstance((a and b), int):
-        raise TypeError("'a' must be an integer or 'b' must be an integer")
-    if not isinstance((a and b), float):
-        raise TypeError("'a' must be an integer or 'b' must be an integer")
-    if a or b is float:
-        int(a or b)
+    if not isinstance(a, (int, float)):
+        raise TypeError("'a' must be an integer")
+    if not isinstance(b,(int, float)):
+        raise TypeError("'b' must be an integer")
     
-    return a+b
-
-def main():
-    print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
-try:
-    print(add_integer(4, "School"))
-except Exception as e:
-    print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
-
-main()
+    return int(a) + int(b)

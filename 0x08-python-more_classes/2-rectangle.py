@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Real definition of a rectangle module"""
+"""Area and perimeter module"""
 
 
 class Rectangle:
@@ -10,7 +10,6 @@ class Rectangle:
         width(int): private instance attribute of a class
                     it is the breath of the rectangle
         height(int):private instance attribute of a class
-        
         Raises:
         TypeError: if width is not int
                  : if height is not int
@@ -35,10 +34,11 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        self.__width == value
 
     @property
     def height(self):
+
         """
         Raise:
             TypeError: if height is not type(int)
@@ -53,3 +53,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be greater or __eq__ t0 zero")
         self.__height = value
+
+    def area(self):
+        """returns the area of rectangle"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """return the total length of the rectangle"""
+        if self.__width = 0 and self.height = 0:
+            print("Perimeter is equal to 0")
+        return 2 * (self.__width + self.__height)

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""String Representation"""
+"""added repr to class"""
 
 
 class Rectangle:
@@ -32,9 +32,7 @@ class Rectangle:
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width == value
+        self.__height = height
 
     @property
     def height(self):
@@ -70,12 +68,18 @@ class Rectangle:
         if 0 returns empty string
         """
 
-        if self.__width == 0 or self.__height == 0:
-            return 0
-
+        if self.width == 0 or self.height == 0:
+            return ("")
         rect = []
         for n in range(0, self.__height):
             rect.append("#" * self.__width)
             if n != self.__height - 1:
                 rect.append('\n')
         return ''.join(rect)
+
+    def __repr__(self):
+        """
+        return a string representation of a Rectangle instance
+        that is able to recreate a new instance by using eval()
+        """
+        return ("rectangle {:d} {:d}", self.__width, self.__height)

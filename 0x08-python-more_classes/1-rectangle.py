@@ -10,7 +10,6 @@ class Rectangle:
         width(int): private instance attribute of a class
                     it is the breath of the rectangle
         height(int):private instance attribute of a class
-        
         Raises:
         TypeError: if width is not int
                  : if height is not int
@@ -51,5 +50,5 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be greater or __eq__ t0 zero")
+            raise ValueError("height must be >= 0")
         self.__height = value

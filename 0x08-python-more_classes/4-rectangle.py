@@ -58,7 +58,7 @@ class Rectangle:
 
     def perimeter(self):
         """return the total length of the rectangle"""
-        if self.__width == 0 and self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
@@ -82,4 +82,5 @@ class Rectangle:
         return a string representation of a Rectangle instance
         that is able to recreate a new instance by using eval()
         """
-        return ("rectangle {:d} {:d}", self.__width, self.__height)
+        return '{self.__class__.__name__}({self.width}, {self.height})'.\
+            format(self=self)

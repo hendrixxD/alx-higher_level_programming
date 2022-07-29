@@ -60,6 +60,6 @@ class Rectangle:
 
     def perimeter(self):
         """return the total length of the rectangle"""
-        if self.__width = 0 and self.height = 0:
-            print("Perimeter is equal to 0")
+        if self.__width == 0 or self.height == 0:
+            return 0
         return 2 * (self.__width + self.__height)

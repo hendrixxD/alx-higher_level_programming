@@ -86,7 +86,7 @@ class Rectangle:
         return a string representation of a Rectangle instance
         that is able to recreate a new instance by using eval()
         """
-        return ("rectangle {:d} {:d}", self.__width, self.__height)
+        return '{self.__class__.__name__}({ self.__width, self.__height})'.format(self=self)
 
     def __del__(self):
         """print when deleting an instance of a class"""

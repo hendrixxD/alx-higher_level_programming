@@ -7,4 +7,4 @@ class BaseGeometry:
 
     def area(self):
         """no args passed"""
-        raise Exception("area() not implemented")
+        raise Exception("area() is not implemented")

@@ -40,6 +40,7 @@ True
 >>> len(s) > 1
 True
 
+>>> l = MyList()
 >>> l.print_sorted(44, 33)
 Traceback (most recent call last):
 ...

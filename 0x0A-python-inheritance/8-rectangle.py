@@ -1,20 +1,8 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""This module contains a class with public instance
+    and Raises exception when required """
 
-
-class BaseGeometry:
-    """defines a class base on previous"""
-
-    def area(self):
-        """No Args passed"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """validates value entries"""
-        if not isinstance(value, int):
-            raise TypeError("{:s} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -26,5 +14,5 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        BaseGeometry.integer_validator(self, "width", width)
+        BaseGeometry.integer_validator(self, "height", height)

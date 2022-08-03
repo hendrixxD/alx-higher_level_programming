@@ -48,9 +48,9 @@ class Square(Rectangle):
             size: private args
             size must be positive"
         """
-        self.integer_validator("size", size)
+        Rectangle.integer_validator(self, "size", size)
         self.__size = size
-        super().__init__(size, size)
+        Rectangle.__init__(self, size, size)
 
     def area(self):
         """area of square"""

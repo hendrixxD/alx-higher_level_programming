@@ -11,7 +11,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """Args: private instance of class"""
 
-        Rectangle.integer_validator(self,"size", size)
+        Rectangle.integer_validator(self, "size", size)
         self.__size = size
         Rectangle.__init__(self, size, size)
 

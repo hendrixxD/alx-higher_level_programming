@@ -3,6 +3,7 @@
 
 
 def add_attribute(self, name, value):
+    """adds name attribute to an object"""
     if hasattr(self, '__dict__'):
         setattr(self, name, value)
     else:

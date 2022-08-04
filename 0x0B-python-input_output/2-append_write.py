@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""module that defines a fuction to append 
-    a string to a file and return its size"""
+"""module that defines a fuction to
+    append a string to a file and return its size"""
 
 
 def append_write(filename="", text=""):

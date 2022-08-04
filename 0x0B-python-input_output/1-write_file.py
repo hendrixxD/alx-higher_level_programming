@@ -7,4 +7,5 @@ def write_file(filename="", text=""):
         text(str): text to append to filename
     """
     with open('filename', 'w+', encoding='utf-8') as f:
-        f.write(text)
+        size_count= f.write(text)
+    return size_count

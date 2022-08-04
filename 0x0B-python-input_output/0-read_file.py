@@ -7,10 +7,9 @@ def read_file(filename=""):
         UTF-8
         Attr: myfile.txt
     """
-    if type(filename) is str:
-        with open('my_file_0.txt', 'r', encoding="utf-8") as f:
-            """opens the file: my_file in read mode: 'r'
-            with encoding: in 8-bits"""
-            
-            for line in f:
-                print(line, end="")
+    
+    with open('my_file_0.txt', 'r', encoding="utf-8") as f:
+        """opens the file: my_file in read mode: 'r'
+        with encoding: in 8-bits"""
+        for line in f:
+            print(line, end="")

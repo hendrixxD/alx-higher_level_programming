@@ -8,6 +8,7 @@ def read_file(filename=""):
         Attr: myfile.txt
     """
 
-    f = open('my_file_0.txt', 'r', encoding="utf-8")
-    print(f.read())
-    f.close
+    with open('my_file_0.txt', 'r', encoding="utf-8") as f:
+        """opens the file: my_file in read mode: 'r' with encoding: in 8-bits"""
+
+        print(f.read())

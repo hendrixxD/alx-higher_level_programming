@@ -7,7 +7,7 @@ def read_file(filename=""):
         UTF-8
         Attr: myfile.txt
     """
-    
+
     with open(filename, encoding="utf-8") as f:
         """opens the file: my_file in read mode: 'r'
         with encoding: in 8-bits"""

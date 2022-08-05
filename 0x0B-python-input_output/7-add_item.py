@@ -13,22 +13,17 @@ def save_to_json_file(my_obj, filename):
 
 def load_from_json_file(filename):
     """creates an object file from a json file"""
-
     with open(filename) as f:
         ob_file = json.load(f)
     return ob_file
 
-
 filename = "add_item.json"
 
 
-def add_item():
-    """add item function"""
+try:
+    new_file = load_from_json_file(filename)
+except (ValueError, FileNotFoundError, TypeError):
+    new_file = []
 
-    try:
-        new_file = load_from_json_file(filename)
-    except (ValueError, FileNotFoundError, TypeError):
-        new_file = []
-
-    new_file += argv[1:]
-    return(save_to_json_file(new_file, filename))
+new_file += argv[1:]
+return(save_to_json_file(new_file, filename))

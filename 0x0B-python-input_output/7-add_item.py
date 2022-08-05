@@ -17,8 +17,8 @@ def load_from_json_file(filename):
         ob_file = json.load(f)
     return ob_file
 
-filename = "add_item.json"
 
+filename = "add_item.json"
 
 try:
     new_file = load_from_json_file(filename)

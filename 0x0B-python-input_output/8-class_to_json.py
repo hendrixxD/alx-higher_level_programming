@@ -4,5 +4,8 @@ import json
 
 
 def class_to_json(obj):
-    """return the dict of a class in json format"""
+    """return the dict of a class in json format
     return json.dumps(obj.__dict__)
+    """
+
+    return obj.__dict__

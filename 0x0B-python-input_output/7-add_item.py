@@ -31,4 +31,4 @@ def add_item():
         new_file = []
 
     new_file += argv[1:]
-    save_to_json_file(new_file, filename)
+    return(save_to_json_file(new_file, filename))

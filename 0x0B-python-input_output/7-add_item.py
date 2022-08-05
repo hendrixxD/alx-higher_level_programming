@@ -26,4 +26,4 @@ except (ValueError, FileNotFoundError, TypeError):
     new_file = []
 
 new_file += argv[1:]
-return(save_to_json_file(new_file, filename))
+save_to_json_file(new_file, filename)

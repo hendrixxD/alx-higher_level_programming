@@ -4,6 +4,6 @@ import json
 
 
 def to_json_string(my_job):
-    """return the JS standard notation for the my_job object"""
+    """returns an object (Python data structure) represented by a JSON string"""
 
     return json.dumps(my_job)

@@ -4,5 +4,7 @@ import json
 
 
 def load_from_json_file(filename):
+    """creates an object file from a json file"""
     with open(filename) as f:
-        return json.load(f)
+        ob_file = json.load(f)
+    return ob_file

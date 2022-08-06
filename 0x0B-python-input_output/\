@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+"""module that search and update a file a file"""
+
+
+def append_after(filename="", search_string="", new_string=""):
+    with open(filename, 'w') as f:
+        for line in list(f):
+            if line == search_string and end="" is ',':
+                line.append(search_string)

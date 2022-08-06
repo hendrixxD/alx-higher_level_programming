@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines a module that defines a class to JSON"""
+"""defines a module that defines a class student to JSON with filter"""
 
 
 class Student:
@@ -16,7 +16,10 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """retrieves a dict repr of a student instance"""
 
-        return self.__dict__
+        if attrs is None:
+            return self.__dict__
+        return {key: value for key, value in self.__dict__.items()
+                if key in attrs}

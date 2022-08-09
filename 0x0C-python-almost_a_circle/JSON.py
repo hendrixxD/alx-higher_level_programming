@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+import json
+
+print("#foo\bar")
+print(json.dumps("\"foo\bar"))
+print("unicode 1234")
+print(json.dumps("\u1234"))
+print()
+print("with sort kesy")
+print(json.dumps({"c": 0, "b": 0, "a": 0}, sort_keys=True))
+print("with sort keys and seperators")
+print(json.dumps({"c": 0, "b": 0, "a": 0}, sort_keys=False))
+print()
+print(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(',',':')))
+print(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(' , ',' : ')))
+print(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(', ',': ')))
+print(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(' ,',' :')))
+print()
+print("pretty printing")
+print(json.dumps({'4': 5, '7': 9, '6': 7}, sort_keys=True, indent = 4))
+print(json.dumps({'4': 5, '7': 9, '6': 7}, sort_keys=False, indent = 3))

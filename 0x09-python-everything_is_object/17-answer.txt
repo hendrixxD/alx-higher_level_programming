@@ -1,0 +1,1 @@
+SyntaxError: cant assign to literal

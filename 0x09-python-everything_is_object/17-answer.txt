@@ -1,1 +1,2 @@
 SyntaxError: cant assign to literal
+[1, 2, 3, 4

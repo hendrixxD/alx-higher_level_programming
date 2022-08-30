@@ -22,8 +22,8 @@ class Base:
                 to 'id' attribute
         """
 
-        if self.id is not None:
+        if id is not None:
             self.id = id
         else:
-            __nb_object += 1
-            self.id = __nb_object
+           Base. __nb_object += 1
+           self.id =Base. __nb_object

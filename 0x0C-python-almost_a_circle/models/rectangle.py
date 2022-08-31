@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """class 'Rectangle' inherits from the base class 'Base'"""
-
+from module.base import Base
 
 class Rectangle(Base):
     """private instance attributes:

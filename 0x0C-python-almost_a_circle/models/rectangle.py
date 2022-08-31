@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """class 'Rectangle' inherits from the base class 'Base'"""
+
+
 from models.base import Base
+
 
 class Rectangle(Base):
     """private instance attributes:
@@ -12,7 +15,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor"""
-        super().__init__(id)
+        Base.__init__(self, id)
         self.width = width
         self.height = height
         self.x = x
@@ -31,6 +34,10 @@ class Rectangle(Base):
         setter instance attribute for width
         assign value to width
         """
+        if not isinstance(value, int):
+            raise TypeError(f"{value} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{value} must be > 0")
         self.__value = width
 
     @property
@@ -47,6 +54,10 @@ class Rectangle(Base):
         setter function for height
         assigns value to height
         """
+        if not isinstance(value, int):
+            raise TypeError(f"{value} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{value} must be > 0")
         self.__value = height
 
     @property
@@ -63,6 +74,10 @@ class Rectangle(Base):
         setter function for x
         assigns value to x
         """
+        if not isinstance(value, int):
+            raise TypeError(f"{value} must be an integer")
+        if value < 0:
+            raise ValueError(f"{value} must be >= 0")
         self.__value = x
 
     @property
@@ -78,4 +93,8 @@ class Rectangle(Base):
         """
         setter function for y, assign value to y
         """
+        if not isinstance(value, int):
+            raise TypeError(f"{value} must be an integer")
+        if value < 0:
+            raise ValueError(f"{value} must be >= 0")
         self.__value = y

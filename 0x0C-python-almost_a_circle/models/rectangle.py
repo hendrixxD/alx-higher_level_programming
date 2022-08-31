@@ -2,7 +2,7 @@
 """class 'Rectangle' inherits from the base class 'Base'"""
 
 
-class rectangle(Base):
+class Rectangle(Base):
     """private instance attributes:
     __width
     __height

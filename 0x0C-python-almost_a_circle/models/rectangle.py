@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """class 'Rectangle' inherits from the base class 'Base'"""
-from module.base import Base
+from models.base import Base
 
 class Rectangle(Base):
     """private instance attributes:
@@ -13,10 +13,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):

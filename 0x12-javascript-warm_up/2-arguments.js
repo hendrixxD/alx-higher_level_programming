@@ -2,7 +2,7 @@
 
 require('process');
 
-let argvLen = process.argv.length - 2;
+const argvLen = process.argv.length - 2;
 
 if (argvLen > 1) {
     console.log('Arguments found');

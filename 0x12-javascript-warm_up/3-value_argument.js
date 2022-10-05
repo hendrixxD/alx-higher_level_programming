@@ -11,4 +11,3 @@ if (index > 2) {
     console.log('No argument');
 }
 
-

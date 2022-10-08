@@ -16,7 +16,8 @@ def main():
     PSWD = argv[2]
     DB = argv[3]
 
-    d_b = sql.connect(host = 'localhost', user = USER, passwd = PSWD, db = DB, port = 3306)
+    d_b = sql.connect(host='localhost', user=USER,
+            passwd=PSWD, db=DB, port = 3306)
 
     cur = d_b.cursor()
     cur.execute("SELECT * FROM states ORDER BY id")
@@ -24,6 +25,11 @@ def main():
     rows = cur.fetchall()
     for row in rows:
         print(row)
+
+    # close cursor
+    cur.close()
+    # close connection
+    d_b.close()
 
 
 if __name__ == '__main__':

@@ -13,12 +13,10 @@ def main():
     """
 
     USER = argv[1]
-    PSSWD = argv[2]
+    PSWD = argv[2]
     DB = argv[3]
 
-    d_b = sql.connect(
-        host = 'localhost', user = USER,
-        passwd = PSSWD, db = DB, port = 3306)
+    d_b = sql.connect(host = 'localhost', user = USER, passwd = PSWD, db = DB, port = 3306)
 
     cur = d_b.cursor()
     cur.execute("SELECT * FROM states ORDER BY id")

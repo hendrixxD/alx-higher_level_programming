@@ -15,8 +15,8 @@ root@localhost:3306/hbtn_0e_6_usa')
 class State(Base):
     """table to be created in hbtn_0e_6_usa database
     """
-    __table_name__ = 'states'
+    __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, unique=True,
-                nullable=False, autoincreament=True)
+                nullable=False)
     name = Column(String(128), nullable=False)

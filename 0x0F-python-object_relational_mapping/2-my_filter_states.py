@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""Lists all states from the database hbtn_0e_0_usa"""
+"""list search states"""
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-
+    
+    state_name = sys.argv[4]
     conn = MySQLdb.connect(host="localhost",
                            port=3306,
                            user=sys.argv[1],
@@ -15,12 +16,13 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     # Query
-    cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC")
-    query_rows = cur.fetchall()
+    cur.execute("SELECT * FROM states WHERE name = '{}' \
+            ORDER BY id ASC".format(state_name))
+    rows = cur.fetchall()
 
     # Print query
-    for row in query_rows:
-        if row[1][0] == 'N':
+    for row in rows:
+        if row[1] == state_name:
             print(row)
 
     # Close cursor

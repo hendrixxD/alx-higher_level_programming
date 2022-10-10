@@ -23,13 +23,13 @@ if __name__ == '__main__':
     all_states = session.query(State).all()
     states_list = []
     for state in all_states:
-        state_list.append(state.name)
+        states_list.append(state.name)
 
     # query the database to extract the first argument
     s = session.query(State).filter(State.name == argv[4]).first()
 
     # print the queried database
-    if argv[4] not in state_list:
+    if argv[4] not in states_list:
         print("Not found")
     else:
         print(s.id)

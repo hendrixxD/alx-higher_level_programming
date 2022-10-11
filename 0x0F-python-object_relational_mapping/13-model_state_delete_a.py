@@ -28,10 +28,11 @@ if __name__ == '__main__':
     """
     # Deleting object instance returned by a query
     # (will issue 2 statements: first SELECT, then DELETE):
-    
-    obj=session.query(State).filter(State.name.ilike('%a%')).all()
-    session.delete(obj)
-    session.commit() 
+
+    obj = session.query(State).filter(State.name.ilike('%a%')).all()
+
+    for delete in obj:
+        session.delete(delete)
 
     # commit new update
     session.commit()

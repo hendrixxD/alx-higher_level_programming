@@ -1,4 +1,5 @@
 #!/usr/bin/node
+require('process');
 
 const arg = parseInt(process.argv[2], 10);
 
